@@ -28,4 +28,12 @@ interface RoleDao
      * @return RoleInterface[]
      */
     public function getRoles(UserInterface $user);
+
+    /**
+     * Fetches a role by ID.
+     *
+     * @param $roleId
+     * @return RoleInterface
+     */
+    public function getRoleById($roleId) : RoleInterface;
 }
