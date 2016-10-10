@@ -36,4 +36,27 @@ interface RoleDao
      * @return RoleInterface
      */
     public function getRoleById($roleId) : RoleInterface;
+
+    /**
+     * Creates a new role. Returns the role object.
+     *
+     * @param string $label
+     * @return RoleInterface
+     */
+    public function createRole(string $label) : RoleInterface;
+
+    /**
+     * Renames a role (changes the label).
+     *
+     * @param $roleId
+     * @param string $label
+     */
+    public function renameRole($roleId, string $label);
+
+    /**
+     * Deletes a role.
+     *
+     * @param string $roleId
+     */
+    public function deleteRole($roleId);
 }
