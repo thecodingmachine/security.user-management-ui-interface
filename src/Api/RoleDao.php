@@ -38,7 +38,7 @@ interface RoleDao
     public function getRoleById($roleId) : RoleInterface;
 
     /**
-     * Creates a new role. Returns the role object.
+     * Creates a new role (and stores it). Returns the role object.
      *
      * @param string $label
      * @return RoleInterface
