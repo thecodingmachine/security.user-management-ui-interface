@@ -4,23 +4,25 @@ namespace Mouf\Security\UserManagement\Impl;
 
 use Mouf\Security\UserManagement\Api\RoleInterface;
 
-class Role implements RoleInterface {
+class Role implements RoleInterface
+{
+    private $id;
+    private $label;
 
-  private $id;
-  private $label;
-
-  public function __construct($id = null, string $label = "") {
-    $this->id = $id;
-    $this->label = $label;
-  }
+    public function __construct($id = null, string $label = "")
+    {
+        $this->id = $id;
+        $this->label = $label;
+    }
 
     /**
      * Returns the ID of a role.
      *
      * @return mixed
      */
-    public function getId() {
-      return $this->id;
+    public function getId()
+    {
+        return $this->id;
     }
 
     /**
@@ -28,7 +30,8 @@ class Role implements RoleInterface {
      *
      * @return string
      */
-    public function getLabel() : string {
-      return $this->label;
+    public function getLabel() : string
+    {
+        return $this->label;
     }
 }
